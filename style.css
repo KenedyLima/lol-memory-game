@@ -1,50 +1,91 @@
 * {
-  margin: 0;
   padding: 0;
+  margin: 0;
   box-sizing: border-box;
 }
 
 html {
   font-size: 10px;
 }
+
 body {
-  position: relative;
-}
-
-.complete-card {
-  transform-style: preserve-3d;
-  transition: transform 600ms;
-}
-
-.complete-card:active {
-  transform: scale(0.97);
-}
-
-.card {
-  width: 15rem;
-  height: 15rem;
-  border: 5px solid #f1cf3b;
-  cursor: pointer;
-  position: absolute;
-}
-
-.backcard {
-  backface-visibility: hidden;
-}
-
-.cards-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url(https://images7.alphacoders.com/536/thumb-1920-536426.png);
+  background-size: cover;
   width: 100vw;
-  height: 100vh;
-  display: grid;
-  grid-template-columns: repeat(4, 15rem);
-  grid-template-rows: repeat(3, 15rem);
-  align-content: center;
-  justify-content: center;
-  gap: 10px;
-  background-image: linear-gradient(45deg, #164e63, #0f766e, #059669);
-  perspective: 1000px;
+  max-height: 100vh;
+  text-transform: uppercase;
+  font-family: "Cabin", sans-serif;
+  color: #f9fafb;
 }
 
-.flip {
-  transform: rotateY(180deg);
+main {
+  margin-top: 3.2rem;
+}
+
+.lol-logo {
+  width: 50rem;
+  height: 20rem;
+}
+
+h1 {
+  font-size: 3.2rem;
+}
+
+.level-container {
+  height: 30rem;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2.4rem;
+}
+
+a,
+a:link,
+a:visited {
+  font-size: 2.4rem;
+  border: 5px solid #0a3e52;
+  background-image: linear-gradient(
+    45deg,
+    #164e63,
+    #0e7490,
+    #0891b2,
+    #155e75,
+    #164e63
+  );
+
+  background-size: 400% 400%;
+  padding: 1.6rem 3.2rem;
+  animation: backgroundAnimation 15s ease-in-out infinite;
+  text-decoration: none;
+  color: #f9fafb;
+  display: inline-block;
+}
+
+a:hover,
+a:active {
+  background-image: linear-gradient(45deg, #164e63, #0e7490, #155e75, #164e63);
+}
+
+footer {
+  position: absolute;
+  bottom: 2px;
+}
+
+@keyframes backgroundAnimation {
+  0% {
+    background-position: 0% 20%;
+  }
+
+  50% {
+    background-position: 80% 10%;
+  }
+
+  100% {
+    background-position: 0% 20%;
+  }
 }

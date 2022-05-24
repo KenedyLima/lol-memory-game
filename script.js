@@ -1,5 +1,5 @@
+const cardsContainer = document.querySelector(".cards-container");
 let cards = document.querySelectorAll(".complete-card");
-
 let firstCardId;
 let secondCardId;
 let hasFlippedCard = false;
@@ -13,7 +13,7 @@ function flipCard(e) {
   setTimeout(() => {
     setAndUpdateCardsIds(card);
     checkCorrectCards();
-  }, 2000);
+  }, 1500);
   // setTimeout(checkCorrectCards, 2000);
 }
 /* HELPERS */
@@ -73,3 +73,13 @@ cards.forEach((card) =>
     flipCard(e);
   })
 );
+
+/*LEVEL RELATED FUNCTIONS  */
+
+export function generateHTMLForEasyLevel() {
+  console.log(cards);
+}
+
+export function generateHTMLForMediumLevel() {}
+
+export function generateHTMLForDifficultLevel() {}
