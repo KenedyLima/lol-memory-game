@@ -9,6 +9,52 @@ html {
 }
 body {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  background-image: url(https://images7.alphacoders.com/536/thumb-1920-536426.png);
+  background-size: cover;
+  overflow-x: hidden;
+  width: 100vw;
+  height: 100vh;
+  gap: 4.8rem;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+}
+
+.lol-logo {
+  width: 25rem;
+  height: 10rem;
+  margin-top: 2rem;
+}
+
+.go-back-button {
+  display: inline-block;
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  border: 5px solid #0a3e52;
+  background-image: linear-gradient(
+    45deg,
+    #164e63,
+    #0e7490,
+    #0891b2,
+    #155e75,
+    #164e63
+  );
+  animation: backgroundAnimation 15s ease-in-out infinite;
+  background-size: 400% 400%;
+
+  border-radius: 1rem;
+}
+
+.arrow-left {
+  padding: 0.8rem 1.6rem;
+  width: 4rem;
+  height: 4rem;
+  fill: #fff;
 }
 
 .complete-card {
@@ -33,19 +79,30 @@ body {
 }
 
 .cards-container {
-  width: 100vw;
-  height: 100vh;
   display: grid;
   grid-template-columns: repeat(4, 15rem);
   grid-template-rows: repeat(3, 15rem);
   align-content: center;
   justify-content: center;
   gap: 10px;
-  background-image: url(https://images7.alphacoders.com/536/thumb-1920-536426.png);
-  background-size: cover;
+
   perspective: 1000px;
 }
 
 .flip {
   transform: rotateY(180deg);
+}
+
+@keyframes backgroundAnimation {
+  0% {
+    background-position: 0% 20%;
+  }
+
+  50% {
+    background-position: 80% 10%;
+  }
+
+  100% {
+    background-position: 0% 20%;
+  }
 }
